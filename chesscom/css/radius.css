@@ -1,0 +1,15 @@
+.divcase[data-case-number="0"] {
+    border-top-left-radius: 7%;
+}
+
+.divcase[data-case-number="9"] {
+    border-top-right-radius: 7%;
+}
+
+.divcase[data-case-number="90"] {
+    border-bottom-left-radius: 7%;
+}
+
+.divcase[data-case-number="99"] {
+    border-bottom-right-radius: 7%;
+}
