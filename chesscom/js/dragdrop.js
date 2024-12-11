@@ -2,7 +2,7 @@
 var div = document.querySelectorAll("divcase")
 var every_pion = document.getElementsByClassName("pion")
 var dragged = "";
-
+var eated = false
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -24,11 +24,11 @@ function drop(ev) {
         if (ev.target.getAttribute("class") == "divcase casenoir") {
             if (num_pion == nb_case - 11) {
                 dragged.setAttribute("data-index-number", nb_case)
-                dragged.setAttribute('dragged', 'false')
+                dragged.setAttribute('draggable', 'false')
                 ev.target.appendChild(document.getElementById(data));
             } else if (num_pion == nb_case - 9) {
                 dragged.setAttribute("data-index-number", nb_case)
-                dragged.setAttribute('dragged', 'false')
+                dragged.setAttribute('draggable', 'false')
                 ev.target.appendChild(document.getElementById(data));
             } else if (num_pion == nb_case - 22) {
                 dragged.setAttribute("data-index-number", nb_case)
@@ -55,11 +55,11 @@ function drop(ev) {
         if (ev.target.getAttribute("class") == "divcase casenoir") {
             if (num_pion == nb_case + 11) {
                 dragged.setAttribute("data-index-number", nb_case)
-                dragged.setAttribute('dragged', 'false')
+                dragged.setAttribute('draggable', 'false')
                 ev.target.appendChild(document.getElementById(data));
             } else if (num_pion == nb_case + 9) {
                 dragged.setAttribute("data-index-number", nb_case)
-                dragged.setAttribute('dragged', 'false')
+                dragged.setAttribute('draggable', 'false')
                 ev.target.appendChild(document.getElementById(data));
             } else if (num_pion == nb_case + 22) {
                 dragged.setAttribute("data-index-number", nb_case)

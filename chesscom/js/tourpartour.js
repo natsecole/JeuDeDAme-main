@@ -25,7 +25,7 @@ function tourBlanc() {
     pion_blanc.forEach(pion => {
         pion.setAttribute('draggable', 'true');  
     });
-    pTour.innerHTML = "Au tour des Blancs"
+    pTour.innerHTML = "Trait aux blancs"
     ctx.fillStyle = "#f9f9f9";
     ctx.strokeStyle = "#f9f9f9"
     ctx.stroke()
@@ -40,7 +40,7 @@ function tourNoir() {
     pion_blanc.forEach(pion => {
         pion.setAttribute('draggable', 'false');
     });
-    pTour.innerHTML = "Au tour des Noirs"
+    pTour.innerHTML = "Trait aux noirs"
     ctx.fillStyle = "#5c5957";
     ctx.strokeStyle = "#5c5957"
     ctx.lineWidth = 4
