@@ -1,7 +1,0 @@
-couleur plateau:
-beige: #f6c89a
-noir: #63381e
-
-pion: 
-blanc: #ffe9d3
-noir: #1d2024
