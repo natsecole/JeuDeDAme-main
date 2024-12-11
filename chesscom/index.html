@@ -4,10 +4,63 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/radius.css" rel="stylesheet">
     <link rel="stylesheet" href="css/border.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <title>Jeu de dame HTML</title>
     
 </head>
 <body>
+<nav class="sidebar">
+    <button class="glow-on-hover"><img src="img/rules.jpg" alt="Icone règles"> Règles du jeu</button>
+    <button class="glow-on-hover"><img src="img/prises_tuto.jfif" alt="Icone prises"> Quelques Prises tuto</button>
+    <button class="glow-on-hover"><img src="img/ampoule.png" alt="Icone astuces"> Conseils de Pro</button>
+</nav>
+
+<div id="overlay" class="overlay"></div>
+
+<div id="rulesModal" class="modal">
+    <div class="modal-header">Règles du Jeu</div>
+    <div class="modal-body">
+        <p>- Chaque joueur possède 20 pions, placés sur les cases foncées des 4 premières rangées.</p>
+        <p>- Les joueurs jouent chacun à leur tour. Les blancs commencent toujours.</p>
+        <p>- Chaque pion peut se déplacer d'une case vers l'avant en diagonale.</p>
+        <p>- Un pion arrivant sur la dernière rangée et s'y arrêtant est promu en « dame ». Il est alors doublé (on pose dessus un deuxième pion de sa couleur).</p>
+        <p>- Si un joueur ne peut plus bouger, même s'il lui reste des pions, il perd la partie.</p>
+        <p>- La dame se déplace sur une même diagonale d'autant de cases qu'elle le désire, en avant et en arrière.</p>
+    </div>
+    <div class="modal-footer">
+        <button class="closeModal">Retour</button>
+    </div>
+</div>
+
+<div id="movesModal" class="modal">
+    <div class="modal-header">Différentes Prises</div>
+    <div class="modal-body">
+        <div class="image-container">
+            <img id="moveImage" src="img/prise_pion.jpg" alt="Exemple de prise">
+        </div>
+        <div class="image-controls">
+            <button id="prevImage">Précédent</button>
+            <button id="nextImage">Suivant</button>
+        </div>
+        
+    </div><p id="imageDescription">LA PRISE PAR UN PION - Un pion peut en prendre un autre en sautant par dessus le pion adverse pour se rendre sur la case vide située derrière celui-ci. Le pion sauté est retiré du jeu. La prise peut également s'effectuer en arrière. La prise est obligatoire. Si, après avoir pris un premier pion, vous vous retrouvez de nouveau en position de prise, vous devez continuer, jusqu'à ce que cela ne soit plus possible.  Les pions doivent être enlevés à la fin de la prise et non pas un par un au fur et à mesure.</p>
+    <div class="modal-footer">
+        <button class="closeModal">Retour</button>
+    </div>
+</div>
+
+<div id="tipsModal" class="modal">
+    <div class="modal-header">Les conseils de pro</div>
+    <div class="modal-body">
+        <p>- Contrôlez le centre pour avoir plus d'options.</p>
+        <p>- Protégez vos pions en arrière pour éviter les attaques faciles.</p>
+        <p>- Essayez de promouvoir vos dames dès que possible.</p>
+    </div>
+    <div class="modal-footer">
+        <button class="closeModal">Retour</button>
+    </div>
+</div>
+
 <div class="initdiv block"></div>
 <div id="tourdiv">
     <p id="pTour">Au tour des Blancs</p>
@@ -40,6 +93,7 @@ for (let i = 0; i < 10; i++) {
 <script src="js/pion.js" type="text/javascript"></script>
 <script src="js/dragdrop.js" type="text/javascript"></script>
 <script src="js/tourpartour.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
 <script type="text/javascript">tourBlanc()</script>
 </body>
 </html>

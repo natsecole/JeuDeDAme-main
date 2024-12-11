@@ -10,6 +10,7 @@ function allowDrop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
     dragged = ev.target
+    dragged_base = ev.target
 }
 
 function drop(ev) {
@@ -84,6 +85,20 @@ function drop(ev) {
 }
 
 
+var tourBlancOuPas = true
+
+document.addEventListener('keyup', event => {
+    if (event.code == "Space") {
+        console.log(tourBlancOuPas);
+        if(dragged === dragged_base) {
+            if (tourBlancOuPas === true) {     
+                tourNoir()
+            } else if (tourBlancOuPas === false) {
+                tourBlanc()
+            }
+        }
+    }
+})
 
 // function onDragEnd(ev) {
 

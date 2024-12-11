@@ -16,18 +16,6 @@ ctx.strokeStyle = "#f9f9f9"
 ctx.stroke()
 tourdiv.appendChild(divpion);
 
-var tourBlancOuPas = true
-
-document.addEventListener('keyup', event => {
-    if (event.code == "Space") {
-        console.log(tourBlancOuPas);
-        if (tourBlancOuPas === true) {     
-            tourNoir()
-        } else if (tourBlancOuPas === false) {
-            tourBlanc()
-        }
-    }
-})
 
 
 function tourBlanc() {
