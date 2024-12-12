@@ -68,6 +68,7 @@ body {
     border: none;
     outline: none;
     color: #fff;
+    font-family: TourFout;
     background: #111;
     cursor: pointer;
     position: relative;
@@ -137,6 +138,7 @@ button img {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    margin-top: -4px;
     margin-right: 5px;
 }
 

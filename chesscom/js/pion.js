@@ -17,6 +17,7 @@ casediv.forEach((element) => {
 
     if (i % 2 == 0 && i <= 42 && element.getAttribute("class") == "divcase casenoir") {
         pion.classList.add("pion")
+        pion.setAttribute('data-type', "pion")
         pion.setAttribute('id', 'pion-case-' + n_case)
         pion.setAttribute('data-index-number', n_case)
         pion.setAttribute('name', 'pion_noir')
@@ -30,6 +31,7 @@ casediv.forEach((element) => {
     } else if (i % 2 == 0 && i >= 66 && element.getAttribute("class") == "divcase casenoir") {
         pion.classList.add("pion")
         pion.setAttribute('id', 'pion-case-' + n_case)
+        pion.setAttribute('data-type', "pion")
         pion.setAttribute('data-index-number', n_case)
         pion.setAttribute('name', 'pion_blanc')
         ctx.fillStyle = "#f9f9f9"
